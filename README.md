@@ -6,7 +6,7 @@ Includes support for proxying via tsocks
 Configure
 =========
 
-In tsocks.conf replace the following lines with your proxy configuration
+Copy tsocks.conf.in to tsocks.conf and replace the following lines with your proxy configuration
 ```
 server = <%= @proxy_host %>
 server_port = <%= @proxy_port %>
@@ -14,7 +14,7 @@ default_user = <%= @proxy_username %>
 default_pass = <%= @proxy_password %>
 ```
 
-In settings.json replace the following lines with your proxy configuration
+Copy settings.json.in to settings.json and replace the following lines with your proxy configuration
 ```
 "proxy": "<%= @proxy_host %>", 
 "proxy-auth-password": "<%= @proxy_password %>", 
