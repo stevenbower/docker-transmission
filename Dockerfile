@@ -4,6 +4,7 @@ MAINTAINER Steven Bower <sbower@alcyon.net>
 ENV LANG C.UTF-8
 
 RUN export DEBIAN_FRONTEND=noninteractive \
+    && echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d \
     && apt-get update \
     && apt-get install -q -y --no-install-recommends \
       tsocks \
